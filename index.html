@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Back-end assignment</title>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css"
+        integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+</head>
+
+<body class="container">
+    <br>
+    <div class="jumbotron">
+        <h1 class="display-4">Back-end assignment</h1>
+
+        <div class="card">
+            <div class="card-body">
+                <div class="form-group">
+                    <label for="get">Send GET request</label>
+                    <input id="username" type="text" class="form-control" placeholder="Enter your name">
+                </div>
+
+                <button id="sendGET" type="submit" class="btn btn-primary">Send</button>
+            </div>
+        </div>
+
+        <br>
+        <div class="card">
+            <div class="card-body">
+                <form action="data" method="post">
+                    <div class="form-group">
+                        <label for="post">Send POST request</label>
+                        <input type="text" name="json_data" class="form-control" id="post"
+                            placeholder="Enter some JSON data">
+                    </div>
+
+                    <button type="submit" class="btn btn-primary">Send</button>
+                </form>
+            </div>
+        </div>
+    </div>
+</body>
+<script>
+    document.getElementById('sendGET').onclick = () => {
+        var name = document.getElementById('username').value;
+        if (name.length == 0) {
+            alert('Please enter a name to send a GET request!');
+            return;
+        }
+        window.location = `${window.location}greeting/${name}`;
+    }
+</script>
+
+</html>
