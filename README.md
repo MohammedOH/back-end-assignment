@@ -4,7 +4,7 @@
 Make sure you have installed all of the dependencies from `package.json` file (Express,  and Body-parser).
 
 ## Usage
-Open [this page]().
+Run server.js using command `node server.js`, then open [http://localhost:3000/](http://localhost:3000/).
 
 Enter your name, or any name, in the `name` field to send a GET request. After you do so, you will see the greeting page for the name you entered.
 
